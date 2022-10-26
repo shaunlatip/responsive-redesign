@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+      <title>India Point Park</title>
+
+      <!-- import javascript variables and functions
+      <script src="app.js" defer></script> -->
+      <!-- import CSS styles -->
+      <link rel="stylesheet" href="styles.css" /> 
+      <link rel="stylesheet" href="site-navbar.css" /> 
+      <link rel="stylesheet" href="https://use.typekit.net/pzu1tly.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </head>
+
+    <!-- page content goes into <body> -->
+    <body>
+      <div class="page-wrapper">
+
+
+        <!-- <div class="in-page-navbar" id="static-in-page-navbar">
+
+          <div id="in-page-navbar-about" class="in-page-navbar-item-selected">
+            <h3>About</h3>
+          </div>
+
+          <div class="in-page-navbar-item">
+            <h3>Getting There</h3>
+          </div>
+
+          <div class="in-page-navbar-item">
+            <h3>Trail Map</h3>
+          </div>
+
+          <div class="in-page-navbar-item">
+            <h3>Comments</h3>
+          </div>
+
+        </div> -->
+
+
+        <div id="navbar" class="navbar">
+          <div id="logo-title-wrapper">
+            <img id="logo" src="./assets/RI_Blueways_Logo.gif">
+            <h1>Explore RI</h1>  
+          </div>
+
+          <div class="navbar-links">
+
+            <div class="navbar-link">
+              <h3>Go Paddling</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>Go Walking</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>Outfitters & Gear</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>About Us</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>Stories</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>Resources</h3>
+            </div>
+
+            <div class="navbar-link">
+              <h3>Donate</h3>
+            </div>
+
+          </div>
+
+          <div class="navbar-links-mobile">
+            <div class="navbar-link">
+              <h3>Donate</h3>
+            </div>
+
+            <div class="navbar-hamburger">
+              <img src="./assets/hamburger.svg">
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="content-wrapper">
+
+          <div class="spacer"></div>
+
+          <div class="main-content">
+
+            <div class="return-section">
+              <div class="return-button">
+                <img src="./assets/return-arrow.png">
+                <h4>Return to List</h4>
+              </div>
+            </div>
+
+            <div class="section" id="header">
+
+              <div class="section-content">
+
+                <h1 id="title">India Point Park</h1>
+
+                <div class="subtitle-info-desktop">
+                  <div class="subtitle-star-container">
+                    <img src="./assets/star.png">
+                  </div>
+                  <p>
+                    4.0 (3 Reviews) • Providence • Managed by the City of Providence • Updated October 1st, 2022
+                  </p>
+                </div>
+
+                <div class="subtitle-info-mobile">
+                  
+                  <div class="subtitle-info-bullet" id="star-bullet" >
+                    <div class="subtitle-star-container">
+                      <img src="./assets/star.png">
+                    </div>
+                    <p>4.0 (3 Reviews)</p>
+                  </div>
+
+                  <div class="subtitle-info-bullet">
+                    <p>In Providence</p>
+                  </div>
+
+                  <div class="subtitle-info-bullet">
+                    <p>Managed by the City of Providence</p>
+                  </div>
+
+                  <div class="subtitle-info-bullet">
+                    <p>Updated October 1st, 2022</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="section" id="photos">
+
+                <div class="no-padding-section-content">
+                  <div class="header-photos-container">
+                    <div class="header-photos">
+
+                      <div class="main-photo">
+                        <img src="./assets/bannerphoto1.png">
+                      </div>
+
+                      <div class="secondary-photo">
+                        <img id="header-photo-2" src="./assets/bannerphoto2.png">
+                      </div>
+
+                    </div>
+
+                    <btn class="photos-button">
+                      Show All Photos
+                    </btn>
+
+                  </div>
+
+
+
+               </div>
+
+              <div class="header-photos-container-mobile">
+                 
+                <div class="header-photos">
+
+                      <img src="./assets/shrunkbanner.png">
+
+                  </div>
+
+                  <btn class="photos-button">
+                    Show All Photos
+                  </btn>
+
+                  </div>
+
+              </div>
+
+            <div class="in-page-navbar">
+
+              <div id="in-page-navbar-about" class="in-page-navbar-item-selected">
+                <h3>About</h3>
+              </div>
+
+              <div class="in-page-navbar-item">
+                <h3><a href="#getting-there">Getting There</a></h3>
+              </div>
+
+              <div class="in-page-navbar-item">
+                <h3><a href="#trail-map">Trail Map</a></h3>
+              </div>
+
+              <div class="in-page-navbar-item">
+                <h3><a href="#comments">Comments</a></h3>
+              </div>
+
+            </div>
+
+            <script>
+              $ (document).ready(function() {
+                  //change the integers below to match the height of your upper div, which I called
+                  //banner.  Just add a 1 to the last number.  console.log($(window).scrollTop())
+                  //to figure out what the scroll position is when exactly you want to fix the nav
+                  //bar or div or whatever.  I stuck in the console.log for you.  Just remove when
+                  //you know the position.
+                  $(window).scroll(function () { 
+
+                    console.log($(window).scrollTop());
+
+                    if ($(window).scrollTop() > 720) {
+                      $('#static-in-page-navbar').addClass('navbar-fixed-top');
+                    }
+
+                    if ($(window).scrollTop() < 720) {
+                      $('#static-in-page-navbar').removeClass('navbar-fixed-top');
+                    }
+                  });
+                });
+            </script>
+
+
+          
+
+
+
+            <div id="about" class="section">
+              <div class="two-thirds-section-content">
+
+                <div class="section-subtitle"><h2>Activities</h2></div>
+
+                <div class="activities">
+
+                  <div id="horse" class="activity">
+                    <img src="./assets/mdi_horse-human.png">
+                    <h3>No Horse Riding Allowed</h3>
+                  </div>
+
+                  <div id="dog" class="activity">
+                    <img src="./assets/mdi_dog-service.png">
+                    <h3>Leashed Pets Allowed</h3>
+                  </div>
+
+                  <div id="cycling" class="activity">
+                    <img src="./assets/bi_bicycle.png">
+                    <h3>Cycling Allowed</h3>
+                  </div>
+
+                </div>
+
+                <div id="whats-there" class="section-subtitle"><h2>What's there?</h2></div>
+
+                <div class="long-text">
+                  <p>Located in the historic Fox Point neighborhood of Providence’s East Side, India Point Park is celebrated for its sweeping views of the Providence Harbor and Seekonk River. In addition to lighted, paved & stone dust walking paths along the water, the park includes a playground with ropes, swings and a sandbox. There is a ceremonial dock and a pedestrian bridge over Rt. 195 - connecting the park to the neighborhood. India Point Park is the location for the City’s annual 4th of July fireworks display, along with concerts and festivals throughout the summer...</p>
+                </div>
+
+                <div class="show-more">
+                  <h4>Show More</h4>
+                </div>
+
+              </div>
+              <div class="one-third-section-content responsive-top-section">
+
+                <div class="section-subtitle"><h2>Trail Information</h2></div>
+                <p class="trail-info-text">
+                  <br>
+                  <h3 class="trail-info-subtitle">Trail Length</h3>
+                  1.5 Miles
+                  <br>
+                  <br>
+                  <h3 class="trail-info-subtitle">Accessible Length</h3>
+                  <p class="tooltip">What's this?</p>
+                  1.5 Miles
+                  <br>
+                  <br>
+                  <h3 class="trail-info-subtitle">Difficulty</h3>
+                  <p class="tooltip">What's this?</p>
+                  <div class="easy-difficulty">
+                    <h3>Easy</h3>
+                  </div>
+
+                </p>
+
+              </div>
+            </div>
+
+            <div id="getting-there" class="section">
+
+              <div class="two-thirds-section-content responsive-top-section">
+
+                <div class="section-title"><h1>Getting There</h1></div>
+                <br>
+                <div class="section-subtitle"><h2>Driving</h2></div>
+                <div class="long-text-3-lines">
+                  <p>Driving Landmarks: Follow Gano Street southbound until it turns into India Street as you approach the park. The parking lot is just ahead on the left. In addition to the parking lot there is extensive roadside parking along India Street adjacent to the park.
+                    <br><br>
+                    Parking: Yes: Parking lot, 30 spaces, no overnight parking
+                    <br><br>
+                    ADA Accessible Parking Spaces? Yes</p>
+                </div>
+                <div class="show-more">
+                  <h4>Show More</h4>
+                </div>
+
+                <br>
+                <div class="section-subtitle"><h2>Cycling</h2></div>
+                <div class="long-text-3-lines">
+                    <p>India Point Park is directly connected to the East Bay Bike Path.</p>
+                </div>
+
+                <br>
+                <div class="section-subtitle"><h2>Bus</h2></div>
+                <div class="long-text-3-lines">
+                    <p>The RIPTA 92 bus passes near the park on Wickendon Street. Get off near East Street and follow East Street two blocks to the footbridge over the highway.</p>
+                </div>
+
+                <br>
+                <div class="section-subtitle"><h2>Ferry</h2></div>
+                <div class="long-text-3-lines">
+                  <p>Seastreak & RIPTA operate a ferry to Newport from a dock adjacent to the park.</p>
+                </div>
+
+              </div>
+
+              <div class="one-third-section-content">
+
+                <div class="address-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.503845852822!2d-71.3925653843712!3d41.8174475792272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44537c79cab09%3A0xe39bbb7ded173d2b!2sIndia%20Point%20Park!5e0!3m2!1sen!2sus!4v1666565376434!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <p class="address-map-text">
+                  <br>
+                  <b>Entrance Location:</b><br>
+                  201 India St, Providence, RI 02903<br>
+                  41° 49.072' N,    71° 23.428' W
+                  <br>
+                </p>
+
+                <button class="blue-button">
+                    Open in Google Maps
+                </button>
+
+                <button class="blue-button">
+
+                    Open in Acme Maps
+
+                </button>
+
+              </div>
+
+            </div>
+
+            <div id="trail-map" class="section">
+
+              <div class="one-third-section-content  responsive-top-section">
+
+                <div class="section-title"><h1>Trail Map</h1></div>
+                <div>
+                  <p>
+                    <br>
+                    Only trailheads related to this trail system are shown on this map. 
+                    To see all trailheads go to the main map.
+                    <br> <br>
+                    For a downloadable copy, please click the button below.
+                    <br>
+                  </p>
+                  <button class="blue-button">
+                    Open Trail Map PDF
+                </button>
+                </div>
+
+              </div>
+
+              <div class="two-thirds-section-content">
+                <div class="trail-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.503845852822!2d-71.3925653843712!3d41.8174475792272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44537c79cab09%3A0xe39bbb7ded173d2b!2sIndia%20Point%20Park!5e0!3m2!1sen!2sus!4v1666565376434!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <img class="key" src="./assets/key.png">
+                </div>
+              </div>
+              
+            </div>
+
+            <div id="comments" class="section">
+
+              <div class="one-third-section-content  responsive-top-section">
+
+                <div id="comments-section-title" class="section-title"><h1>Comments</h1></div>
+
+                <h1 class="rating-average">4.0</h1>
+                <img class="stars-average" src="./assets/4stars.png">
+                <p class="total-reviews">3 Reviews</p>
+
+                <div class="rating-breakdown">
+
+                  <div class="rating">
+                    <p>5 Stars</p>
+                    <div class="bar"></div>
+                  </div>
+
+                  <div class="rating">
+                    <p>4 Stars</p>
+                    <img src="./assets/emptybar.png">
+                  </div>
+
+                  <div class="rating">
+                    <p>3 Stars</p>
+                    <img src="./assets/emptybar.png">
+                  </div>
+
+                  <div class="rating">
+                    <p>2 Stars</p>
+                    <div  class="bar" id="half-bar"></div>
+                  </div>
+
+                  <div class="rating">
+                    <p>1 Stars</p>
+                    <img src="./assets/emptybar.png">
+                  </div>
+
+                </div>
+
+                <button class="blue-button">
+                  Write a Comment
+                </button>
+
+                <div class="feedback-card">
+                  <div class="feedback-card-content">
+
+                    <b>Do you have feedback you would like to share with us?<br></b>
+                    <p>Help us do better by reaching out to us below. <br></p>
+                    <button class="white-button">
+                      Share Private Feedback
+                    </button>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="two-thirds-section-content">
+
+                <div class="comment-header">
+
+                  <button class="sort-by">
+                    <p>Sort by: <b>Most Recent  </b></p>
+                    <img src="./assets/downchevron.png">
+                  </button>
+
+                  <button class="search-bar">
+                    <img src="./assets/search-icon.png">
+                    <p>search</p>
+                  </button>
+
+                </div>
+
+                <div class="comment">
+                  <b>5/5 Great Park!</b>
+                  <p class="comment-subtitle">Posted by Anonymous on October 17, 2022, 5:56 pm</p>
+                  <p class="comment-body">Great park next to college hill!</p>
+                  <br>
+                  <button class="blue-button reply-button">Reply</button>
+                </div>
+
+                <div class="comment">
+                  <b>5/5 Great Park!</b>
+                  <div class="long-text-3-lines">
+                    <p class="comment-subtitle">Posted by Kelly Halstead on August 6, 2022, 4:26 pm</p>
+                  </div>
+                  <p class="comment-body">Perfect spot for a stroll anytime of day!! I love having a picnic in the shade of beautiful blooming trees. Picturesque sunsets!!</p>
+                  <br>
+                  <img src="./assets/kellyphoto.png">
+                  
+                  <button class="blue-button reply-button">Reply</button>
+                </div>
+
+                <div class="comment">
+                  <b>2/5 No Restrooms unless there is a concert or festival</b>
+                  <div class="long-text-3-lines">
+                    <p class="comment-subtitle">Posted by Hygiene for Providence on June 20, 2022, 8:07 am</p>
+                  </div>
+                  <p class="comment-body">There are no permanent restrooms at this park. There is no separation from bicycles and pedestrians on the walkways. The cyclists are a danger particularly on the stairway entrance.</p>
+                  <br>
+                  <button class="blue-button reply-button">Reply</button>
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+
+          <div class="spacer"></div>
+
+        </div>
+
+        <div id="footer" class="footer">
+
+          <h4 id="footer-string">© 2008-2022 Rhode Island Blueways Alliance, Rhode Island Land Trust Council</h4>
+
+          <div id="footer-links">
+
+            <h4>User Disclaimer</h4>
+            <h4>info@exploreri.com</h4>
+
+          </div>
+
+        </div>
+          
+      </div>
+    </body>
+ 
+
+</html>
